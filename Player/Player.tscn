@@ -182,12 +182,11 @@ animations = [{
 script = ExtResource("1_oc64j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(59, 54)
 shape = SubResource("CapsuleShape2D_aolee")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.999996, 6)
+position = Vector2(60, 55)
 scale = Vector2(3.91667, 3.54167)
 sprite_frames = SubResource("SpriteFrames_73tlo")
-animation = &"Jump"
-frame = 1
-frame_progress = 0.543548
+animation = &"idle"
