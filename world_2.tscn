@@ -2,37 +2,36 @@
 
 [ext_resource type="PackedScene" uid="uid://dhetk7g5ocif3" path="res://Player/Player.tscn" id="1_ekkuk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfgyl"]
-size = Vector2(1141, 83)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo7tk"]
+size = Vector2(1121, 91.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5j84c"]
-size = Vector2(162.25, 430.25)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kub4"]
+size = Vector2(251.5, 521.75)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rnms"]
-size = Vector2(143.5, 424.75)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_koils"]
+size = Vector2(216.5, 433.75)
 
 [node name="World2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ekkuk")]
-position = Vector2(436, 129)
+position = Vector2(347, 24)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Player"]
-position = Vector2(-1, 20)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/StaticBody2D"]
-position = Vector2(154.5, 331)
-shape = SubResource("RectangleShape2D_lfgyl")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(601, 424)
+shape = SubResource("RectangleShape2D_mo7tk")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/StaticBody2D"]
-position = Vector2(-428, 95)
-shape = SubResource("RectangleShape2D_5j84c")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-10, 165)
+shape = SubResource("RectangleShape2D_4kub4")
 
-[node name="Panel" type="Panel" parent="Player/StaticBody2D/CollisionShape2D2"]
-offset_left = -33.0
-offset_top = 216.0
-offset_right = 1193.0
-offset_bottom = 256.0
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1135, 198)
+shape = SubResource("RectangleShape2D_koils")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player/StaticBody2D"]
-position = Vector2(680, 78.375)
-shape = SubResource("RectangleShape2D_7rnms")
+[node name="Panel" type="Panel" parent="."]
+offset_left = 132.0
+offset_top = 370.0
+offset_right = 1083.0
+offset_bottom = 410.0
