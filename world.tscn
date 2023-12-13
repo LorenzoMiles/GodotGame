@@ -2,37 +2,36 @@
 
 [ext_resource type="PackedScene" uid="uid://dhetk7g5ocif3" path="res://Player/Player.tscn" id="1_firvk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fodcs"]
-size = Vector2(1049.25, 136)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sp50s"]
+size = Vector2(1157.5, 110)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgi8h"]
-size = Vector2(167.625, 622.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpqct"]
+size = Vector2(150.75, 467)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5flh3"]
-size = Vector2(82.8125, 669)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhrps"]
+size = Vector2(150.75, 467)
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_firvk")]
-position = Vector2(436, 110)
+position = Vector2(427, 79)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Player"]
-position = Vector2(64, 76)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/StaticBody2D"]
-position = Vector2(9, 361)
-shape = SubResource("RectangleShape2D_fodcs")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(593, 449)
+shape = SubResource("RectangleShape2D_sp50s")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/StaticBody2D"]
-position = Vector2(546, 91)
-shape = SubResource("RectangleShape2D_vgi8h")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1108, 215)
+shape = SubResource("RectangleShape2D_wpqct")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player/StaticBody2D"]
-position = Vector2(-546.406, 104)
-shape = SubResource("RectangleShape2D_5flh3")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2, 224)
+shape = SubResource("RectangleShape2D_hhrps")
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = -4.0
-offset_top = 457.0
-offset_right = 1098.0
-offset_bottom = 521.0
+[node name="Panel" type="Panel" parent="StaticBody2D/CollisionShape2D3"]
+offset_left = 9.0
+offset_top = 149.0
+offset_right = 1174.0
+offset_bottom = 189.0

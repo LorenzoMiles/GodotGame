@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://ci55kvquvwp5e" path="res://Space Runner Assets - 27-11-20/Astronaut/Astronaut_Idle.png" id="5_jhj4w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aolee"]
+radius = 39.0
+height = 84.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o7qys"]
 atlas = ExtResource("2_hrbi2")
@@ -182,11 +184,12 @@ animations = [{
 script = ExtResource("1_oc64j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(59, 54)
+position = Vector2(125, 99)
 shape = SubResource("CapsuleShape2D_aolee")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(60, 55)
+position = Vector2(127, 100)
 scale = Vector2(3.91667, 3.54167)
 sprite_frames = SubResource("SpriteFrames_73tlo")
-animation = &"idle"
+animation = &"Run"
+frame_progress = 0.890144

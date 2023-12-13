@@ -14,14 +14,11 @@ config/name="Intro to CS: Game Project"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
-<<<<<<< HEAD
-config/git_sha="c25af8a83b2941e2bac40cfec1fab7ca500fa25a"
+<<<<<<<HEADconfig/git_sha="c25af8a83b2941e2bac40cfec1fab7ca500fa25a"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/git_sha_project_setting/plugin.cfg")
-=======
->>>>>>> ddb465b78cef2f6c3693ba3900cc0c0da372a6a4
 
 [rendering]
 
