@@ -11,7 +11,7 @@
 script = ExtResource("1_8bu3i")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1155, 0)
+motion_mirroring = Vector2(1152, 0)
 
 [node name="SpaceBackground" type="Sprite2D" parent="ParallaxLayer"]
 texture_filter = 1
@@ -19,28 +19,29 @@ position = Vector2(577, 327)
 scale = Vector2(0.602083, 0.603704)
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1153.5, 0)
 
-[node name="Parallax-space-backgound" type="Sprite2D" parent="."]
+[node name="Parallax-space-far-planets" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(570, 236)
+texture = ExtResource("4_hecmg")
+
+[node name="Parallax-space-backgound" type="Sprite2D" parent="ParallaxLayer2"]
 texture_filter = 1
-position = Vector2(584, 322)
-scale = Vector2(4.56526, 4.25469)
+position = Vector2(578.563, 325.813)
+scale = Vector2(4.23116, 4.06484)
 texture = ExtResource("2_prpwp")
 
-[node name="Parallax-space-big-planet" type="Sprite2D" parent="."]
+[node name="Parallax-space-big-planet" type="Sprite2D" parent="ParallaxLayer2"]
 texture_filter = 1
 position = Vector2(137.5, 403.25)
 scale = Vector2(1.82955, 1.86782)
 texture = ExtResource("3_ao6qx")
 
-[node name="Parallax-space-far-planets" type="Sprite2D" parent="."]
-position = Vector2(570, 236)
-texture = ExtResource("4_hecmg")
-
-[node name="Parallax-space-stars" type="Sprite2D" parent="."]
+[node name="Parallax-space-stars" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(631, 268)
 texture = ExtResource("5_qpu6t")
 
-[node name="Parallax-space-ring-planet" type="Sprite2D" parent="."]
+[node name="Parallax-space-ring-planet" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(926.75, 172.75)
 scale = Vector2(1.14706, 1.28261)
 texture = ExtResource("6_25f5h")
