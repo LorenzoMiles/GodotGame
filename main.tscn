@@ -21,9 +21,6 @@ offset_bottom = 452.0
 tooltip_text = "Click if you want to exit the game"
 text = "Quit"
 
-[node name="TileMap" type="TileMap" parent="."]
-format = 2
-
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_mqc84")]
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
