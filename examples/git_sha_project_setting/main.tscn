@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://df3jwwsfmx72i"]
+[gd_scene load_steps=2 format=3 uid="uid://big3ttcpdbxib"]
 
 [ext_resource type="Script" path="res://examples/git_sha_project_setting/main.gd" id="1_sowp6"]
 
