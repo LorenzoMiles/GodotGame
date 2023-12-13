@@ -15,7 +15,12 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 <<<<<<<HEADconfig/git_sha="c25af8a83b2941e2bac40cfec1fab7ca500fa25a"
-config/git_sha="0d4b752a8aba51c36030bbcb051570ecd4fcb956"
+config/git_sha="3832ef1762b1570b775f8dc5970a8acd197a821e"
+
+[autoload]
+
+Game="*res://Global/Game.gd"
+Utils="*res://Global/Utils.gd"
 
 [editor_plugins]
 
