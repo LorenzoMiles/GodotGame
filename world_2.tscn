@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=7 format=3 uid="uid://bontoqqw5j3j4"]
+=======
+[gd_scene load_steps=9 format=3 uid="uid://mc7pjheryplr"]
+>>>>>>> bf458d3d85f261a891dd52696797441b442bb7cc
 
 [ext_resource type="Texture2D" uid="uid://cjet308ydagw5" path="res://space_background_pack/space_background_pack/layers/parallax-space-backgound.png" id="1_8wah2"]
 [ext_resource type="PackedScene" uid="uid://dhetk7g5ocif3" path="res://Player/Player.tscn" id="1_ekkuk"]
@@ -1089,6 +1093,7 @@ position = Vector2(-421, 230)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
+<<<<<<< HEAD
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-251, 298.5)
 shape = SubResource("RectangleShape2D_hhqpp")
@@ -1096,3 +1101,22 @@ shape = SubResource("RectangleShape2D_hhqpp")
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(5576, 333)
 shape = SubResource("RectangleShape2D_hhqpp")
+=======
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(613, 479)
+shape = SubResource("RectangleShape2D_mo7tk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-10, 165)
+shape = SubResource("RectangleShape2D_4kub4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1135, 198)
+shape = SubResource("RectangleShape2D_koils")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 123.0
+offset_top = 440.0
+offset_right = 1074.0
+offset_bottom = 480.0
+>>>>>>> bf458d3d85f261a891dd52696797441b442bb7cc
