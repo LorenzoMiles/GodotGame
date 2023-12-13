@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxeol7e5dr6pp"]
+
+[ext_resource type="Script" path="res://Fire Trap.gd" id="1_ehdj3"]
+[ext_resource type="Texture2D" uid="uid://b85xgvj0h0ob7" path="res://Space Runner Assets - 27-11-20/Tiles/Foozle_2DS0007_Pixel_Trap_Pack/Foozle_2DTR0001_Pixel_Trap_Pack/Fire Trap/PNGs/Fire Trap - Level 3.png" id="2_74lll"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsv2m"]
+size = Vector2(188, 64)
+
+[node name="Fire Trap" type="Area2D"]
+script = ExtResource("1_ehdj3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(43, -20)
+texture = ExtResource("2_74lll")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(44, -21)
+shape = SubResource("RectangleShape2D_vsv2m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CollisionShape2D")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
