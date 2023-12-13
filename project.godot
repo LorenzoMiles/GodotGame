@@ -14,7 +14,7 @@ config/name="Intro to CS: Game Project"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
-config/git_sha="0911015642ab41e57994b191573028d0ff7c781d"
+config/git_sha="c25af8a83b2941e2bac40cfec1fab7ca500fa25a"
 
 [editor_plugins]
 

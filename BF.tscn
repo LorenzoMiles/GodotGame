@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfb5xd037llid"]
+[gd_scene load_steps=7 format=3 uid="uid://dfb5xd037llid"]
 
 [ext_resource type="Script" path="res://BF.gd" id="1_8bu3i"]
-[ext_resource type="Texture2D" path="res://space_1/spaceBackground.png" id="1_ut2a6"]
+[ext_resource type="Texture2D" uid="uid://cjet308ydagw5" path="res://space_background_pack/space_background_pack/layers/parallax-space-backgound.png" id="2_prpwp"]
+[ext_resource type="Texture2D" uid="uid://cyn73pk8salou" path="res://space_background_pack/space_background_pack/layers/parallax-space-big-planet.png" id="3_ao6qx"]
+[ext_resource type="Texture2D" uid="uid://dld824dpdxang" path="res://space_background_pack/space_background_pack/layers/parallax-space-far-planets.png" id="4_hecmg"]
+[ext_resource type="Texture2D" uid="uid://cfbp5h7l6b23j" path="res://space_background_pack/space_background_pack/layers/parallax-space-stars.png" id="5_qpu6t"]
+[ext_resource type="Texture2D" uid="uid://dspq27ok2qd1d" path="res://space_background_pack/space_background_pack/layers/parallax-space-ring-planet.png" id="6_25f5h"]
 
 [node name="BG" type="ParallaxBackground"]
 script = ExtResource("1_8bu3i")
@@ -13,6 +17,30 @@ motion_mirroring = Vector2(1155, 0)
 texture_filter = 1
 position = Vector2(577, 327)
 scale = Vector2(0.602083, 0.603704)
-texture = ExtResource("1_ut2a6")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+
+[node name="Parallax-space-backgound" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(584, 322)
+scale = Vector2(4.56526, 4.25469)
+texture = ExtResource("2_prpwp")
+
+[node name="Parallax-space-big-planet" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(137.5, 403.25)
+scale = Vector2(1.82955, 1.86782)
+texture = ExtResource("3_ao6qx")
+
+[node name="Parallax-space-far-planets" type="Sprite2D" parent="."]
+position = Vector2(570, 236)
+texture = ExtResource("4_hecmg")
+
+[node name="Parallax-space-stars" type="Sprite2D" parent="."]
+position = Vector2(631, 268)
+texture = ExtResource("5_qpu6t")
+
+[node name="Parallax-space-ring-planet" type="Sprite2D" parent="."]
+position = Vector2(926.75, 172.75)
+scale = Vector2(1.14706, 1.28261)
+texture = ExtResource("6_25f5h")
