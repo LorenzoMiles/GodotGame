@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dspq27ok2qd1d" path="res://space_background_pack/space_background_pack/layers/parallax-space-ring-planet.png" id="6_25f5h"]
 
 [node name="BG" type="ParallaxBackground"]
+scroll_offset = Vector2(399.316, -605.252)
 script = ExtResource("1_8bu3i")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
@@ -22,18 +23,18 @@ scale = Vector2(0.602083, 0.603704)
 motion_mirroring = Vector2(1153.5, 0)
 
 [node name="Parallax-space-far-planets" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(570, 236)
+position = Vector2(573, 960)
 texture = ExtResource("4_hecmg")
 
 [node name="Parallax-space-backgound" type="Sprite2D" parent="ParallaxLayer2"]
 texture_filter = 1
-position = Vector2(578.563, 325.813)
-scale = Vector2(4.23116, 4.06484)
+position = Vector2(574.281, 984.406)
+scale = Vector2(4.24058, 4.93242)
 texture = ExtResource("2_prpwp")
 
 [node name="Parallax-space-big-planet" type="Sprite2D" parent="ParallaxLayer2"]
 texture_filter = 1
-position = Vector2(137.5, 403.25)
+position = Vector2(378, 1175)
 scale = Vector2(1.82955, 1.86782)
 texture = ExtResource("3_ao6qx")
 
@@ -42,6 +43,6 @@ position = Vector2(631, 268)
 texture = ExtResource("5_qpu6t")
 
 [node name="Parallax-space-ring-planet" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(926.75, 172.75)
+position = Vector2(917, 859)
 scale = Vector2(1.14706, 1.28261)
 texture = ExtResource("6_25f5h")
