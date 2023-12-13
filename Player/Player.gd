@@ -37,3 +37,5 @@ func _physics_process(_delta):
 		if velocity.y > 0:
 			anim.play("Fall")
 	move_and_slide()
+func die() -> void:
+	get_tree().reload_current_scene()
