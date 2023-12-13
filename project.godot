@@ -15,7 +15,7 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 <<<<<<<HEADconfig/git_sha="c25af8a83b2941e2bac40cfec1fab7ca500fa25a"
-config/git_sha="70988ce4ef3b38cae95f6c915fb59658ecc68466"
+config/git_sha="bf458d3d85f261a891dd52696797441b442bb7cc"
 
 [editor_plugins]
 
