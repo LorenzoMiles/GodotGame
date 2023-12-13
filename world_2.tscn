@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://bontoqqw5j3j4"]
+[gd_scene load_steps=12 format=3 uid="uid://bontoqqw5j3j4"]
 
 [ext_resource type="Texture2D" uid="uid://cjet308ydagw5" path="res://space_background_pack/space_background_pack/layers/parallax-space-backgound.png" id="1_8wah2"]
 [ext_resource type="PackedScene" uid="uid://dhetk7g5ocif3" path="res://Player/Player.tscn" id="1_ekkuk"]
 [ext_resource type="Texture2D" uid="uid://4ahcugs761el" path="res://Space Runner Assets - 27-11-20/Tiles/RunnerTileSet.png" id="2_4biok"]
-[ext_resource type="PackedScene" uid="uid://dxeol7e5dr6pp" path="res://fire_trap.tscn" id="2_hds1u"]
-[ext_resource type="PackedScene" uid="uid://cja6oi2qtrhjl" path="res://void.tscn" id="5_eme3u"]
+[ext_resource type="PackedScene" path="res://fire_trap.tscn" id="2_hds1u"]
+[ext_resource type="PackedScene" path="res://void.tscn" id="5_eme3u"]
+[ext_resource type="PackedScene" uid="uid://kgf3b2opbpi4" path="res://alien.tscn" id="6_emk6m"]
+[ext_resource type="PackedScene" uid="uid://na5a2u21yqs8" path="res://fly.tscn" id="7_aw2yn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ajv5b"]
 texture = ExtResource("2_4biok")
@@ -2124,3 +2126,15 @@ position = Vector2(3474, 661)
 
 [node name="Fire Trap8" parent="." instance=ExtResource("2_hds1u")]
 position = Vector2(2996, 693)
+
+[node name="Alien" parent="." instance=ExtResource("6_emk6m")]
+position = Vector2(-156, 113)
+
+[node name="Alien2" parent="." instance=ExtResource("6_emk6m")]
+position = Vector2(-346, 147)
+
+[node name="Fly" parent="." instance=ExtResource("7_aw2yn")]
+position = Vector2(308, 203)
+
+[node name="Fly2" parent="." instance=ExtResource("7_aw2yn")]
+position = Vector2(982, 261)

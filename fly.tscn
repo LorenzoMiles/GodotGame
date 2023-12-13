@@ -1,0 +1,148 @@
+[gd_scene load_steps=21 format=3 uid="uid://na5a2u21yqs8"]
+
+[ext_resource type="Script" path="res://fly.gd" id="1_afmbp"]
+[ext_resource type="Texture2D" uid="uid://dplkrm7pomks" path="res://Space Runner Assets - 27-11-20/Alien/fly_death.png" id="1_qg6g8"]
+[ext_resource type="Texture2D" uid="uid://d14ydjsr38iu4" path="res://Space Runner Assets - 27-11-20/Alien/fly_fly.png" id="2_vogve"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vy7u"]
+radius = 13.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhuil"]
+atlas = ExtResource("1_qg6g8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_014ap"]
+atlas = ExtResource("1_qg6g8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4f33"]
+atlas = ExtResource("1_qg6g8")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5f6w"]
+atlas = ExtResource("1_qg6g8")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_siggl"]
+atlas = ExtResource("1_qg6g8")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r1ue"]
+atlas = ExtResource("1_qg6g8")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puokh"]
+atlas = ExtResource("1_qg6g8")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kqb3"]
+atlas = ExtResource("1_qg6g8")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74qr7"]
+atlas = ExtResource("2_vogve")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxito"]
+atlas = ExtResource("2_vogve")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dq3e"]
+atlas = ExtResource("2_vogve")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utgmb"]
+atlas = ExtResource("2_vogve")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36r07"]
+atlas = ExtResource("2_vogve")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1tid6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhuil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_014ap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4f33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5f6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_siggl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r1ue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puokh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kqb3")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74qr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxito")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dq3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utgmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36r07")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snq6g"]
+radius = 8.06226
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fa3wx"]
+radius = 14.3178
+
+[node name="Fly" type="CharacterBody2D"]
+script = ExtResource("1_afmbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(78, 102)
+shape = SubResource("CircleShape2D_6vy7u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(76, 100)
+scale = Vector2(1.8125, 1.375)
+sprite_frames = SubResource("SpriteFrames_1tid6")
+animation = &"death"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(78, 111)
+shape = SubResource("CircleShape2D_snq6g")
+
+[node name="PlayerDeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
+position = Vector2(78, 96)
+shape = SubResource("CircleShape2D_fa3wx")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
+[connection signal="body_exited" from="PlayerDeath" to="." method="_on_player_death_body_exited"]

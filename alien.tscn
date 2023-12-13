@@ -173,7 +173,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ns8to"]
-radius = 18.0278
+radius = 8.60233
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1h4qo"]
 radius = 11.4018
@@ -182,7 +182,7 @@ radius = 11.4018
 script = ExtResource("1_nvau0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(300, 235)
+position = Vector2(300, 247)
 shape = SubResource("CircleShape2D_pd83v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -195,14 +195,14 @@ animation = &"Death"
 position = Vector2(210, 179)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
-position = Vector2(90, 67)
+position = Vector2(90, 68)
 shape = SubResource("CircleShape2D_ns8to")
 
 [node name="PlayerDeath" type="Area2D" parent="."]
 position = Vector2(210, 179)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
-position = Vector2(90, 44)
+position = Vector2(90, 51)
 shape = SubResource("CircleShape2D_1h4qo")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
